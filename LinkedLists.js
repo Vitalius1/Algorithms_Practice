@@ -10,7 +10,13 @@ function Node(val){
 
 // Prototype function of Sll of adding a new node
 Sll.prototype.add = function(val) {
-    myNewNode = new Node(val);
+    /* if user does not input any value, the method will a output a message to 
+    the console and continue to the next call of the method in the chain */
+    if (typeof(val) === 'undefined') {
+        console.log("Node value can not be undefined. Input a value.");
+        return this;
+    }
+    var myNewNode = new Node(val);
     if (!this.head){ // check if we don't have a Singley Linked List started -->
         this.head = myNewNode; // --> start the SLL at the new node
     } else{
@@ -24,5 +30,5 @@ Sll.prototype.add = function(val) {
 };
 
 var mySll = new Sll();
-mySll.add(20).add(50);
+mySll.add().add(50).add().add().add(22);
 console.log(mySll);
