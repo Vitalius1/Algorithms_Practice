@@ -10,5 +10,13 @@ function ReverseString(str){
     return revStr;
 }
 
-console.log(ReverseString('Diana'));
+// Reversing a string using built in methods of Array and String
+function revStr(str){
+    return str.split('').reverse().join('');
+}
+
+// Uncomment next two lines to run the function and output the result to the console
+// console.log(revStr('Vitalie'));
+// console.log(ReverseString('Diana'));
+
 // =================================================================
