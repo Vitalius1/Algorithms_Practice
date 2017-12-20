@@ -20,8 +20,8 @@ Sll.prototype.add = function(val) {
     var myNewNode = new Node(val);
     if (!this.head){ // check if we don't have a Singley Linked List started -->
     this.head = myNewNode; // --> start the SLL at the new node
-} else{
-    var runner = this.head; // else traverse the list with a runner to find the last node in SLL
+} else{ // else traverse the list with a runner to find the last node in SLL
+    var runner = this.head;
     while (runner.next){
         runner = runner.next;
     }
@@ -29,8 +29,10 @@ Sll.prototype.add = function(val) {
 }
 return this; // return Sll to be able to chain methods
 };
-// =================================================================================================
 
-var mySll = new Sll();
-mySll.add().add(50).add().add().add(22);
-console.log(mySll);
+// Uncomment next two lines to run the function and output the result to the console
+// var mySll = new Sll();
+// mySll.add().add(50).add().add().add(22);
+// console.log(mySll);
+
+// =================================================================================================
