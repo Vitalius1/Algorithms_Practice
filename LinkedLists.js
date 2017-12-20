@@ -8,6 +8,7 @@ function Node(val){
     this.next = null;
 }
 // =================================================================================================
+
 // Prototype function "add" for Sll
 
 Sll.prototype.add = function(val) {
