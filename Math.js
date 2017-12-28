@@ -30,6 +30,6 @@ function ConvertToRoman(num) {
 }
 
 // Uncomment the line bellow to test the function and see the output in the console
-console.log(ConvertToRoman(14));
+// console.log(ConvertToRoman(14));
 
 // =================================================================

@@ -53,7 +53,7 @@ function InsertAtIndex1(arr, idx, val) {
 // The order of elements needs to be kept after insertion (without using splice or slice methods)
 function InsertAtIndex2(arr, idx, val) {
     var lastIdx = arr.length - 1,
-    i;
+        i;
     if (idx < 0 || idx > lastIdx) {
         console.log("Index provided is out of bounds of the array to insert into.");
         return;
@@ -68,5 +68,22 @@ function InsertAtIndex2(arr, idx, val) {
 // Uncomment next two lines to run the function and output the result to the console
 // var arr = [1, 2, 3, 5]
 // console.log(InsertAtIndex2(arr, 1, 4));
+
+// ====================================================================================================
+
+// Flatten Array
+
+function FlattenArray(arr) {
+    return arr.reduce(function (accumulator, item) {
+        if (Array.isArray(item)) {
+            return accumulator.concat(FlattenArray(item));
+        }
+        return accumulator.concat(item);
+    }, []);
+}
+
+// Uncomment next two lines to run the function and output the result to the console
+// var arr = [[1, 2, 3], 'a', [4, 5, 6], 'b', 'c', [7, 8], []];
+// console.log(FlattenArray(arr));
 
 // ====================================================================================================
