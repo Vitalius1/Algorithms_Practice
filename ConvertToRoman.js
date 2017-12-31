@@ -1,6 +1,8 @@
-// =================================================================
-
-// Convert a number to Roman number
+// -------------------------------------------------------------------------
+// -------------------------------------------------------------------------
+// =================== Convert a number to Roman number ====================
+// -------------------------------------------------------------------------
+// -------------------------------------------------------------------------
 
 function ConvertToRoman(num) {
     let map = {
@@ -29,7 +31,4 @@ function ConvertToRoman(num) {
     return romanNum;
 }
 
-// Uncomment the line bellow to test the function and see the output in the console
-// console.log(ConvertToRoman(14));
-
-// =================================================================
+console.log(ConvertToRoman(14));
