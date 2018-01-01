@@ -23,5 +23,28 @@ function isPalindrome_2(string) {
     return true;
 }
 
-console.log(isPalindrome_1("aha")); // => true
-console.log(isPalindrome_2("ah*&^%%_a")); // => true
+// ++++++ Best time complexity solution ++++++
+function isPalindrome_3(string) {
+    let front = 0,
+        back = string.length - 1;
+    while (back > front) {
+        while (string[front].match(/[\W_]/)) {
+            front++;
+            continue;
+        }
+        while (string[back].match(/[\W_]/)) {
+            back--;
+            continue;
+        }
+        if (string[front].toLowerCase() !== string[back].toLowerCase()) {
+            return false;
+        }
+        front++;
+        back--;
+    }
+    return true;
+}
+
+console.log(isPalindrome_1("aha"));        // => true
+console.log(isPalindrome_2("ah*&^%%_a"));  // => true
+console.log(isPalindrome_3("ahab*$#aha")); // => true
